@@ -1,5 +1,3 @@
-import { getSession } from "next-auth/react";
-import { NextRequest } from "next/server";
 import { authOptions } from "../src/app/api/auth/[...nextauth]/route"
 import prismadb from "./prismadb"
 import { getServerSession } from "next-auth";

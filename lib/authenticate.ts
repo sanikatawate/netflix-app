@@ -17,8 +17,7 @@ export async function authenticate(userData: userData) {
 		const res = await signIn("credentials", {
 			email: userData.email,
 			password: userData.password,
-			redirect: false,
-			callbackUrl: "/",
+			callbackUrl: "/profiles",
 		});
 		if (res?.ok) {
 			return { success: true, message: "" };

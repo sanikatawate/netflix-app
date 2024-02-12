@@ -1,7 +1,18 @@
-import HomePage from "@/components/ui/home";
+import Navbar from "../components/Navbar";
+import HomePage from "../components/home";
+import { getServerSession } from "next-auth";
 
-export default async function Home() {
+const page = async() => {
+	const session = await getServerSession()
 	return (
-		<HomePage />
+		<div>
+			<div>
+				Server Session Result {session?.user?.email ? <div>{session?.user?.email}</div>: <div>Not Signed In</div>}
+			</div>
+			<HomePage />
+		</div>
+		
 	);
 }
+
+export default page;

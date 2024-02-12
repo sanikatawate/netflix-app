@@ -13,27 +13,27 @@ import { NextAuthOptions } from "next-auth";
 export const authOptions: NextAuthOptions = {
 	providers: [
 		// OAuth authentication providers...
-		AppleProvider({
-			clientId: process.env.APPLE_ID as string,
-			clientSecret: process.env.APPLE_SECRET as string,
-		}),
+		// AppleProvider({
+		// 	clientId: process.env.APPLE_ID as string,
+		// 	clientSecret: process.env.APPLE_SECRET as string,
+		// }),
 		GithubProvider({
 			clientId: process.env.GITHUB_CLIENT_ID as string,
 			clientSecret: process.env.GITHUB_CLIENT_SECRET as string,
 		}),
-		FacebookProvider({
-			clientId: process.env.FACEBOOK_ID as string,
-			clientSecret: process.env.FACEBOOK_SECRET as string,
-		}),
-		GoogleProvider({
-			clientId: "YAHA PE TERI CLIENT ID SIDHA PASTE KARDE",
-			clientSecret: "DEKH TE HAI KEYS AND ID TOH SAHI HAI KE NAI",
-		}),
-		// Passwordless / email sign in
-		EmailProvider({
-			server: process.env.MAIL_SERVER,
-			from: "NextAuth.js <no-reply@example.com>",
-		}),
+		// FacebookProvider({
+		// 	clientId: process.env.FACEBOOK_ID as string,
+		// 	clientSecret: process.env.FACEBOOK_SECRET as string,
+		// }),
+		// GoogleProvider({
+		// 	clientId: "YAHA PE TERI CLIENT ID SIDHA PASTE KARDE",
+		// 	clientSecret: "DEKH TE HAI KEYS AND ID TOH SAHI HAI KE NAI",
+		// }),
+		// // Passwordless / email sign in
+		// EmailProvider({
+		// 	server: process.env.MAIL_SERVER,
+		// 	from: "NextAuth.js <no-reply@example.com>",
+		// }),
 		CredentialsProvider({
 			id: "credentials",
 			name: "credentials",
@@ -65,17 +65,17 @@ export const authOptions: NextAuthOptions = {
 	],
 	callbacks: {
 		async jwt({ token, user, session }) {
-			console.log("Token: ", token)
+			// console.log("Token: ", token)
 			return token;
 		},
 		async session({ session, token, user }) {
-			console.log("Session: ", session)
+			// console.log("Session: ", session)
 			return session;
 		},
 	},
-	// pages: {
-	// 	signIn: "/sign-in",
-	// },
+	pages: {
+		signIn: "/sign-in",
+	},
 	debug: process.env.NODE_ENV === "development",
 	adapter: PrismaAdapter(prismadb),
 	session: {
@@ -87,5 +87,5 @@ export const authOptions: NextAuthOptions = {
 	secret: process.env.NEXTAUTH_SECRET,
 };
 
-export const handler = NextAuth(authOptions);
+export const handler = NextAuth(authOptions)
 export { handler as GET, handler as POST};

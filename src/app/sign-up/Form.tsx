@@ -33,10 +33,10 @@ const Form = () => {
 				router.push("/sign-in");
 			}
             const response = await authenticate(userData)
-            if(res?.status==200){
-            router.push('/')
-            router.refresh()
-            }
+            // if(res?.status==200){
+            // router.push('/')
+            // router.refresh()
+            // }
 		} catch (e: any) {}
         finally{
             SetIsLoading(false)

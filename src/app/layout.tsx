@@ -3,6 +3,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import SessionProvider from "../components/SessionProvider";
 import { getServerSession } from "next-auth";
+import { authOptions } from "./api/auth/[...nextauth]/route";
 // import Provider from "../context/AuthContext";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -17,7 +18,7 @@ export default async function RootLayout({ children }: { children: React.ReactNo
 
 	return (
 		<html lang="en">
-			<body className={inter.className} suppressHydrationWarning>
+			<body className={`${inter.className} bg-zinc-900`} suppressHydrationWarning>
 				<SessionProvider session={session}>{children}</SessionProvider>
 			</body>
 		</html>

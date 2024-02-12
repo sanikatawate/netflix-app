@@ -51,24 +51,14 @@ function HomePage() {
 							</div> */}
 
 							{session?.status=="authenticated"?
-							<button className="bg-red-600 px-5 py-2 rounded-[3px] text-white hover:bg-red-800" onClick={() => signOut()}>
+							<button className="bg-red-600 px-5 py-2 rounded-[3px] text-white hover:bg-red-800" 
+								onClick={() => signOut()}>
 								Sign Out
 							</button>:
 							<Link href="/sign-in">
 								<button className="bg-red-600 px-5 py-2 rounded-[3px] text-white hover:bg-red-800">Sign In</button>
 							</Link>
-							}
-
-							{/* <div id="google_translate_element" className="h-0 w-0 overflow-visible"></div>  */}
-
-
-							{/* <button className="bg-red-600 px-5 py-2 rounded-[3px] text-white hover:bg-red-800" onClick={() => signOut()}>
-								Sign Out
-							</button>
-							<Link href="/sign-in">
-								<button className="bg-red-600 px-5 py-2 rounded-[3px] text-white hover:bg-red-800">Sign In</button>
-							</Link> */}
-							
+							}							
 						</section>
 					</nav>
 					<section className="text-white flex flex-col items-center gap-4 mt-48">
