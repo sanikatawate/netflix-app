@@ -6,8 +6,8 @@ export async function GET(req:NextRequest){
     // 405 ==> Wrong Method
     try {
         const user = await serverAuth()
-        console.log(user)
-        return NextResponse.json( user, {status: 200})
+        console.log(user, "Current working fine")
+        return NextResponse.json(user)
     } catch (error) {
         console.log(error)
         return NextResponse.json({status: 400})

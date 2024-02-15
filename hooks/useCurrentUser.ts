@@ -1,10 +1,13 @@
-// "use client"
 import useSWR from 'swr'
 import fetcher from "../lib/fetcher"
 
 const useCurrentUser = () => {
-    const { data, error, isLoading } = useSWR('/api/current', fetcher)
-    return { data, error, isLoading }
+    const { data, error, isLoading, mutate } = useSWR('/api/current', fetcher, {
+        revalidateIfStale:false,
+        revalidateOnFocus:false,
+        revalidateOnReconnect:false
+    })
+    return { data, error, isLoading, mutate }
 }
 
 export default useCurrentUser

@@ -1,11 +1,16 @@
 "use client"
 import { signOut, useSession } from 'next-auth/react'
 import Link from 'next/link'
+import { useRouter } from 'next/navigation'
 import React from 'react'
 
 function HomePage() {
+  const router = useRouter()
   const session = useSession();
-  console.log({session})
+//   console.log(session?.status)
+  if(session?.status==="authenticated"){
+	router.push("/user")
+  }
 
   return (
     <main className='h-full w-full bg-[url("/images/hero.jpg")] bg-center bg-fixed bg-cover dark'>

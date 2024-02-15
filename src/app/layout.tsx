@@ -18,7 +18,7 @@ export default async function RootLayout({ children }: { children: React.ReactNo
 
 	return (
 		<html lang="en">
-			<body className={`${inter.className} bg-zinc-900`} suppressHydrationWarning>
+			<body className={`${inter.className} bg-zinc-900 h-full`} suppressHydrationWarning>
 				<SessionProvider session={session}>{children}</SessionProvider>
 			</body>
 		</html>

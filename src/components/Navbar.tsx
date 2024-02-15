@@ -4,6 +4,7 @@ import NavbarItem from './NavbarItem'
 import { BsChevronDown, BsSearch, BsBell } from 'react-icons/bs'
 import MobileMenu from './MobileMenu'
 import AccountMenu from './AccountMenu'
+import Link from 'next/link'
 
 const TOP_OFFSET  =66
 
@@ -36,8 +37,8 @@ const Navbar = () => {
   return (
     <nav className='w-full fixed z-40'>
         <div className={`${showBackground ? "bg-zinc-900 bg-opacity-90" : ""} pt-4 md:px-16 py-6 flex flex-row items-center transition duration-500`}>
-            <img src='/images/logo.png' alt='logo' width="150"
-              className='mx-8'/>
+            <Link href="/user"><img src='/images/logo.png' alt='logo' width="150"
+              className='mx-8'/></Link>
             <div className='flex-row ml-8 gap-7 hidden lg:flex '>
                 <NavbarItem label='Home'/>
                 <NavbarItem label='Series'/>

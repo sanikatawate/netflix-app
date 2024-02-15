@@ -1,7 +1,11 @@
+"use client"
 import { signOut } from 'next-auth/react'
 import React from 'react'
+import useCurrentUser from '../../hooks/useCurrentUser'
 
 const AccountMenu = ({visible}:{visible?:boolean}) => {
+  const {data} = useCurrentUser()
+  // console.log(data)
   if(!visible){
     return null
   }
@@ -10,7 +14,7 @@ const AccountMenu = ({visible}:{visible?:boolean}) => {
       <div className='flex flex-col gap-3'>
         <div className='px-3 group/item flex flex-row gap-3 items-center w-full'>
           <img className='w-8 rounded-md' src='/images/default-blue.png' alt='' />
-          <p className='text-white text-sm group-hover/item:underline'>Username</p>
+          <p className='text-white text-sm group-hover/item:underline'>{data?.user?.username}</p>
         </div>
         <hr className='bg-gray-600 border-0 h-px my-4' />
         <div onClick={()=>signOut()} className='px-3 text-center text-white text-sm hover:underline '>
