@@ -7,11 +7,11 @@ import useInfoModel from '../../hooks/useInfoModalStore'
 
 const Billboard = () => {
   const { data } = useBillboard()
-  const { openModal, isOpen } = useInfoModel()
+  const { openModal } = useInfoModel()
   const handleOpenModel = useCallback(()=>{
     openModal(data?.id)
-    console.log(isOpen)
-  },[openModal, data?.id, isOpen ])
+    // console.log(isOpen)
+  },[openModal, data?.id])
   return (
     <div className='relative h-[56.25vw'>
       <video 

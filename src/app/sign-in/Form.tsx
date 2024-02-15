@@ -20,12 +20,6 @@ const Form = () => {
 
 	const session = useSession();
 
-	// useEffect(() => {
-	// 	if (session?.status === "authenticated") {
-	// 		router.push("/");
-	// 	}
-	// });
-
 	const handleSubmit = async (e: React.MouseEvent<HTMLButtonElement>) => {
 		e.preventDefault();
 		if (!userData.password || !userData.email) {

@@ -4,7 +4,7 @@ import { NextResponse } from "next/server";
 
 export async function GET(req:Request, {params}:{params:{movieId:string}}){
     try {
-        console.log("woorkrkrkrkrkrkrkkr")
+        // console.log("woorkrkrkrkrkrkrkkr")
         await serverAuth()
         const existsMovie = await prismadb.movie.findFirst({
             where:{

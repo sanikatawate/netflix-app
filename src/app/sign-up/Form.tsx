@@ -20,7 +20,7 @@ const Form = () => {
 
 	const handleSubmit = async (e: React.MouseEvent<HTMLButtonElement>) => {
 		e.preventDefault();
-		console.log(userData);
+		// console.log(userData);
 		if (!userData.username || !userData.password || !userData.email) {
 			setError("Must Provide all the credentials");
 			return null;
@@ -33,10 +33,6 @@ const Form = () => {
 				router.push("/sign-in");
 			}
             const response = await authenticate(userData)
-            // if(res?.status==200){
-            // router.push('/')
-            // router.refresh()
-            // }
 		} catch (e: any) {}
         finally{
             SetIsLoading(false)
