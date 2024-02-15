@@ -39,9 +39,9 @@ const page = () => {
 
 				<section className="flex justify-center">
 					<div className="bg-black bg-opacity-60 px-20 py-14 pb-6 w-2/3 lg:w-2/5 lg:max-w-md rounded-md text-white">
-						<p className=" font-bold text-3xl mb-2">Welcome Back !</p>
+						<p className=" font-bold text-3xl mb-2">Welcome Back!</p>
 						<p className="text-sm mb-6">
-							Enter your email, password and you'll be watching in no time.
+							Enter your email, password and you will be watching in no time.
 						</p>
 						{/* <form className="flex-col flex w-full flex-wrap md:flex-nowrap mb-6 md:mb-0 gap-4 dark">
 							<Input

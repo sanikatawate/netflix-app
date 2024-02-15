@@ -1,5 +1,6 @@
+import HomePage from "@/components/HomePage";
 import Navbar from "../components/Navbar";
-import HomePage from "../components/home";
+// import HomePage from "../components/Home";
 import { getServerSession } from "next-auth";
 
 const page = async() => {

@@ -85,7 +85,7 @@ const Form = () => {
         </Link>
     </p>
     <p className=" text-xs text-zinc-500">
-        This page is protected by Google reCAPTCHA to ensure you're not a bot.{" "}
+        This page is protected by Google reCAPTCHA to ensure you are not a bot.{" "}
         <span className=" text-blue-600 hover:underline">Learn more.</span>
     </p>
     </form>

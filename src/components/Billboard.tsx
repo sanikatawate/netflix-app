@@ -11,7 +11,7 @@ const Billboard = () => {
   const handleOpenModel = useCallback(()=>{
     openModal(data?.id)
     console.log(isOpen)
-  },[openModal, data?.id ])
+  },[openModal, data?.id, isOpen ])
   return (
     <div className='relative h-[56.25vw'>
       <video 

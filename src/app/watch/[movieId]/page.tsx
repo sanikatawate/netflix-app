@@ -5,7 +5,7 @@ import { useParams, useRouter } from 'next/navigation'
 import { ArrowLeftIcon } from '@heroicons/react/24/outline';
 import useMovie from '../../../../hooks/useMovie'
 
-const page = () => {
+const Page = () => {
     // const router = useRouter();
     // const { movieId } = router.query;
     // const { data } = useMovie(movieId as string);
@@ -27,4 +27,4 @@ const page = () => {
   )
 }
 
-export default page
+export default Page
